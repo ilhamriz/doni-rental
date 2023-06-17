@@ -32,13 +32,35 @@ const Layout = ({ children, home }) => {
 
       <footer>
         <Container maxWidth="lg">
-          <Box className={css.footer_container}>
+          <Box className={css.footer_inner}>
             <Box>
-              <Image src="/images/Logo.svg" width={40} height={40} alt="Logo" />
+              <Image
+                className={css.footer_logo}
+                src="/images/Logo.svg"
+                width={40}
+                height={40}
+                alt="Logo"
+              />
             </Box>
-            <Box className={css.footer_content}>
-              <Box>Jl. Srikayangan No. 42, Talang Bakung, Kota Jambi</Box>
-              <Box>0823-7957-9333</Box>
+            <Box className={css.footer_container}>
+              <Box className={css.footer_content}>
+                <Image
+                  src={"/location.svg"}
+                  alt="Location"
+                  width={24}
+                  height={24}
+                />
+                <Box>Jl. Srikayangan No. 42, Talang Bakung, Kota Jambi</Box>
+              </Box>
+              <Box className={css.footer_content}>
+                <Image
+                  src={"/phone.svg"}
+                  alt="Location"
+                  width={24}
+                  height={24}
+                />
+                <Box>0823-7957-9333</Box>
+              </Box>
             </Box>
           </Box>
         </Container>
