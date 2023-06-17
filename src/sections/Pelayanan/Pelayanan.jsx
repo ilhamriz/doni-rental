@@ -48,7 +48,7 @@ function Pelayanan() {
           <Box className={css.content}>
             {cards.map((card, index) => (
               <Box key={index} className={css.card}>
-                <Box sx={{ marginBottom: 4 }}>
+                <Box className={css.card_image}>
                   <Image
                     src={card.image}
                     alt={card.alt}
@@ -56,10 +56,10 @@ function Pelayanan() {
                     height={100}
                   />
                 </Box>
-                <Box className="header-4" sx={{ marginBottom: 2 }}>
-                  {card.title}
+                <Box className={css.card_content}>
+                  <Box className="header-4">{card.title}</Box>
+                  <p>{card.subtitle}</p>
                 </Box>
-                <p>{card.subtitle}</p>
               </Box>
             ))}
           </Box>
