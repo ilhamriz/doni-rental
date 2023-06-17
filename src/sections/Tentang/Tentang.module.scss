@@ -1,0 +1,57 @@
+@import "@/styles/variables";
+
+.wrapper {
+  position: relative;
+  background-color: white;
+}
+
+.container {
+  padding: 100px 0;
+  display: flex;
+  @include all-gap;
+
+  @media (max-width: $dimension-tablet) {
+    flex-direction: column;
+  }
+}
+
+.image_container,
+.content {
+  flex: 50%;
+}
+
+.image_container {
+  overflow: hidden;
+  position: relative;
+  // background-color: cadetblue;
+  background-image: url("/images/about_car.jpg");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $dimension-laptop) {
+    flex: 15%;
+    background-position: center;
+  }
+
+  @media (max-width: $dimension-tablet) {
+    flex: auto;
+    height: 100px;
+    background-position: center;
+  }
+}
+
+.content {
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // background-color: chartreuse;
+
+  @media (max-width: $dimension-tablet) {
+    padding: 0 16px;
+  }
+  @media (max-width: $dimension-mobile-l) {
+    padding: 16px 0;
+  }
+}

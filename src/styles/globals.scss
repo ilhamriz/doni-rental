@@ -1,0 +1,99 @@
+@import "@/styles/variables";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $font-family;
+  background-color: $color-background;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+p {
+  @include text-body;
+  font-size: $font-size-sm;
+  line-height: 27px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.header-1 {
+  @include text-header;
+  font-size: $font-size-xl4;
+  letter-spacing: 0.001em;
+}
+.header-2 {
+  @include text-header;
+  font-size: $font-size-xl2;
+  line-height: 48px;
+  letter-spacing: -0.03em;
+
+  @media (max-width: $dimension-mobile-l) {
+    font-size: $font-size-xl;
+    line-height: 40px;
+  }
+}
+.header-3 {
+  @include text-header;
+  font-size: $font-size-xl;
+  text-transform: capitalize;
+  line-height: 40px;
+}
+.header-3-body {
+  @include text-body;
+  font-size: $font-size-xl;
+  text-transform: capitalize;
+  line-height: 40px;
+}
+.header-4 {
+  @include text-header;
+  font-size: $font-size-lg;
+  line-height: 34px;
+}
+// .header-4 {
+//   @include text-body;
+//   font-size: $font-size-lg;
+//   line-height: 34px;
+// }
+.caption {
+  color: $color-primary;
+  font-weight: 600;
+  font-size: $font-size-xs;
+}
+.text-body {
+  @include text-body;
+  font-size: $font-size-sm;
+  line-height: 27px;
+}
+.text-body-2 {
+  @include text-body;
+  font-size: $font-size-md;
+  line-height: 30px;
+}
+.text-body-3 {
+  @include text-body;
+  font-size: $font-size-xs;
+}
+.text-link {
+  font-size: $font-size-sm;
+  color: $color-body;
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    color: $color-label;
+  }
+}

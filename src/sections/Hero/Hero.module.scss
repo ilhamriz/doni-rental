@@ -1,0 +1,102 @@
+@import "@/styles/variables";
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba($color: #111111, $alpha: 0.5);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    min-width: 1000px;
+    max-width: 1536px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("/images/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: right;
+    z-index: -1;
+  }
+}
+
+.container {
+  padding: 250px 0 100px;
+
+  @media (max-width: $dimension-tablet) {
+    padding-top: 200px;
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 620px;
+  margin-bottom: 170px;
+
+  p {
+    color: $color-title-light;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $dimension-tablet) {
+    margin-bottom: 120px;
+  }
+}
+
+.title {
+  font-family: $font-family;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: $color-title-light;
+  margin-bottom: 16px;
+
+  @media (max-width: $dimension-tablet) {
+    font-size: $font-size-xl3;
+  }
+
+  @media (max-width: $dimension-mobile-l) {
+    font-size: $font-size-xl2;
+  }
+}
+
+.btn_wrapper {
+  display: flex;
+
+  @media (max-width: $dimension-mobile-l) {
+    flex-direction: column;
+  }
+}
+
+.cars_logo_container {
+  // background-color: blue;
+
+  .cars_logo_content {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    column-gap: 70px;
+    row-gap: 24px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    // background-color: red;
+
+    @media (max-width: $dimension-tablet) {
+      transform: translateX(100%);
+      animation: my_animation 10s linear infinite;
+    }
+  }
+
+
+  @keyframes my_animation {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}

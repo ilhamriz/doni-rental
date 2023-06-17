@@ -1,0 +1,26 @@
+@import "@/styles/variables";
+
+.wrapper {
+  background-color: white;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $color-background;
+    height: 100px;
+  }
+}
+
+.container {
+  position: relative;
+  background-image: url("/images/CTA_back.jpg");
+  padding: 100px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}

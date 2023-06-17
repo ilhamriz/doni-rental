@@ -1,0 +1,50 @@
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import css from "./Layout.module.scss";
+import { Box, Button, Container } from "@mui/material";
+import Navbar from "@/components/Navbar/Navbar";
+
+const name = "Ilhamriz";
+export const siteTitle = "Doni Rental Mobil Jambi";
+
+const Layout = ({ children, home }) => {
+  return (
+    <div className={css.container}>
+      <h1 className="hidden">Doni Rental Mobil</h1>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Rental Mobil Jambi" />
+        {/* TODO: UBAH DOMAIN */}
+        <meta property="og:site_name" content="bersamaamerta.com" />
+        <meta property="og:url" content="bersamaamerta.com" />
+        <meta property="og:type" content="article" />
+        <meta name="og:title" content={siteTitle} />
+
+        <title>{siteTitle}</title>
+      </Head>
+
+      <Navbar />
+
+      <main>{children}</main>
+
+      <footer>
+        <Container maxWidth="lg">
+          <Box className={css.footer_container}>
+            <Box>
+              <Image src="/images/Logo.svg" width={40} height={40} alt="Logo" />
+            </Box>
+            <Box className={css.footer_content}>
+              <Box>Jl. Srikayangan No. 42, Talang Bakung, Kota Jambi</Box>
+              <Box>0823-7957-9333</Box>
+            </Box>
+          </Box>
+        </Container>
+      </footer>
+    </div>
+  );
+};
+
+export default Layout;
