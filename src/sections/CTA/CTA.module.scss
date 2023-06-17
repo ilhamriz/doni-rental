@@ -18,9 +18,16 @@
 .container {
   position: relative;
   background-image: url("/images/CTA_back.jpg");
-  padding: 100px 0;
+  padding: 100px 40px;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @media (max-width: $dimension-tablet) {
+    padding: 80px 40px;
+  }
+  @media (max-width: $dimension-mobile-l) {
+    padding: 40px 24px;
+  }
 }

@@ -12,8 +12,8 @@ function CTA() {
             Ambil Kemudi dan Berjelajah Bersama Kami Hari Ini!
           </Box>
           <Box>
-            <ButtonMain styles="dark">Pesan sekarang</ButtonMain>
-            <ButtonMain styles="transparent">Lihat armada</ButtonMain>
+            <ButtonMain styles="dark">Pesan Sekarang</ButtonMain>
+            <ButtonMain styles="transparent">Lihat Armada</ButtonMain>
           </Box>
         </Box>
       </Container>
