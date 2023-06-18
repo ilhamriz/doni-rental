@@ -1,0 +1,108 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "name": "Fortuner VRZ",
+      "image": "/cars/fortuner_vrz.png",
+      "transmission": "Auto",
+      "seats": 7,
+      "gas": 80
+    },
+    {
+      "id": 2,
+      "name": "Pajero Sport 4x4",
+      "image": "/cars/pajero.png",
+      "transmission": "Manual/Auto",
+      "seats": 7,
+      "gas": 68
+    },
+    {
+      "id": 3,
+      "name": "Pajero Sport 4x2",
+      "image": "/cars/pajero.png",
+      "transmission": "Manual/Auto",
+      "seats": 7,
+      "gas": 68
+    },
+    {
+      "id": 4,
+      "name": "Honda Brio",
+      "image": "/cars/brio.png",
+      "transmission": "Manual/Auto",
+      "seats": 5,
+      "gas": 35
+    },
+    {
+      "id": 5,
+      "name": "Innova Reborn",
+      "image": "/cars/innova.png",
+      "transmission": "Manual/Auto",
+      "seats": 7,
+      "gas": 52
+    },
+    {
+      "id": 6,
+      "name": "Hiace",
+      "image": "/cars/hiace.png",
+      "transmission": "Manual",
+      "seats": 16,
+      "gas": 70
+    },
+    {
+      "id": 7,
+      "name": "Raize",
+      "image": "/cars/raize_new.png",
+      "transmission": "Manual/Auto",
+      "seats": 5,
+      "gas": 36
+    },
+    {
+      "id": 8,
+      "name": "Avanza",
+      "image": "/cars/avanza_new.png",
+      "transmission": "Manual/Auto",
+      "seats": 7,
+      "gas": 43
+    },
+    {
+      "id": 9,
+      "name": "Xpander",
+      "image": "/cars/xpander.png",
+      "transmission": "Manual/Auto",
+      "seats": 7,
+      "gas": 45
+    },
+    {
+      "id": 10,
+      "name": "Agya",
+      "image": "/cars/agya.png",
+      "transmission": "Manual/Auto",
+      "seats": 5,
+      "gas": 33
+    },
+    {
+      "id": 11,
+      "name": "Rocky",
+      "image": "/cars/rocky.png",
+      "transmission": "Manual/Auto",
+      "seats": 5,
+      "gas": 36
+    },
+    {
+      "id": 12,
+      "name": "Xenia",
+      "image": "/cars/xenia.png",
+      "transmission": "Manual/Auto",
+      "seats": 7,
+      "gas": 43
+    },
+    {
+      "id": 13,
+      "name": "Ayla",
+      "image": "/cars/agya.png",
+      "transmission": "Manual/Auto",
+      "seats": 5,
+      "gas": 36
+    }
+  ]
+}

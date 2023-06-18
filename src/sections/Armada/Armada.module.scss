@@ -1,0 +1,96 @@
+@import "@/styles/variables";
+
+.wrapper {
+  background-color: white;
+  padding: 100px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 270px);
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  @media (max-width: $dimension-tablet) {
+    grid-template-columns: repeat(2, minmax(auto, 270px));
+  }
+  @media (max-width: 550px) {
+    grid-template-columns: repeat(1, minmax(auto, 300px));
+  }
+}
+
+.card {
+  width: 100%;
+  padding: 32px 24px;
+  border: 1px solid $color-off-white;
+  background-color: $color-off-white;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  transition: all $transition;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $color-primary;
+
+    .card_detail {
+      opacity: 0;
+    }
+
+    .card_button {
+      opacity: 1;
+    }
+  }
+}
+
+.card_name {
+  font-size: $font-size-md;
+  font-weight: 700;
+}
+
+.card_image {
+  display: flex;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.card_bottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card_detail {
+  display: flex;
+  justify-content: space-between;
+  transition: all $transition;
+  min-height: 52px;
+
+  .card_detail_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: $font-size-xs;
+  }
+}
+
+.card_button {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: all $transition;
+}
