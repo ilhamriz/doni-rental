@@ -4,6 +4,7 @@ import Link from "next/link";
 import css from "./Layout.module.scss";
 import { Box, Button, Container } from "@mui/material";
 import Navbar from "@/components/Navbar/Navbar";
+import PropTypes from "prop-types";
 
 const name = "Ilhamriz";
 export const siteTitle = "Doni Rental Mobil Jambi";
@@ -26,7 +27,7 @@ const Layout = ({ children, home }) => {
         <title>{siteTitle}</title>
       </Head>
 
-      <Navbar />
+      <Navbar home={home} />
 
       <main>{children}</main>
 
@@ -67,6 +68,14 @@ const Layout = ({ children, home }) => {
       </footer>
     </div>
   );
+};
+
+Layout.propTypes = {
+  home: PropTypes.bool,
+};
+
+Layout.defaultProps = {
+  home: false,
 };
 
 export default Layout;
