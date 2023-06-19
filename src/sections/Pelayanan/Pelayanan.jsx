@@ -37,7 +37,7 @@ function Pelayanan() {
               Pelayanan
             </Box>
             <Box className={`header-2 ${css.title}`}>
-              Kami memiliki layanan mobil sewa terbaik
+              Kami memiliki layanan sewa mobil terbaik
             </Box>
             <p>
               Staf kami yang ramah dan beragam pilihan kendaraan berkualitas
