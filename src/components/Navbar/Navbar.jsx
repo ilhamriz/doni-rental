@@ -1,10 +1,11 @@
-import { Box, Button, Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import Link from "next/link";
 import css from "./Navbar.module.scss";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import ButtonMain from "../ButtonMain/ButtonMain";
+import PropTypes from "prop-types";
 
 const menus = [
   {
@@ -21,7 +22,7 @@ const menus = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({ home }) => {
   const router = useRouter();
   const [currentPath, setCurrentPath] = useState("");
   const [isMenu, setIsMenu] = useState(false);
@@ -57,30 +58,20 @@ const Navbar = () => {
 
     const pathname = router.pathname;
     setCurrentPath(pathname);
-    console.log(pathname);
-    // const target = query || "";
-    // const newTarget = target?.replaceAll("_", " ") || "";
-    // const rsvp = CheckRSVP(newTarget);
-    // if (target && !rsvp.name) {
-    //   alert("Maaf, URL yang Anda gunakan salah.");
-    //   router.push("/");
-    // }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.isReady]);
 
   return (
     <nav
-      className={`${css.nav__wrapper} ${
-        isScroll ? css["nav__wrapper--scrolled"] : ""
+      className={`${css.nav__wrapper} ${!home ? css.colors : ""} ${
+        isScroll ? css.scrolled : ""
       }`}
     >
       <h2 className="hidden">Navigation</h2>
       <Container maxWidth="lg">
         <Box className={css.nav__container}>
-          <Box>
+          <Link href={"/"} style={{ display: "flex" }}>
             <Image src="/images/Logo.svg" width={40} height={40} alt="Logo" />
-          </Box>
+          </Link>
 
           <Box className={css.nav__bar} onClick={() => setIsMenu(!isMenu)}>
             <svg
@@ -121,7 +112,9 @@ const Navbar = () => {
                 </li>
               ))}
               <li>
-                <ButtonMain styles="outline">Hubungi Kami</ButtonMain>
+                <Link href={"tel:+62823-7957-9333"}>
+                  <ButtonMain styles="outline">Hubungi Kami</ButtonMain>
+                </Link>
               </li>
             </ul>
           </Box>
@@ -129,6 +122,14 @@ const Navbar = () => {
       </Container>
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  home: PropTypes.bool,
+};
+
+Navbar.defaultProps = {
+  home: false,
 };
 
 export default Navbar;

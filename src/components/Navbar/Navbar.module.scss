@@ -10,7 +10,11 @@ $dimension-bar: 900px;
   z-index: 2;
   transition: 0.3s ease-in-out;
 
-  &--scrolled {
+  &.colors {
+    background-color: $color-background;
+  }
+
+  &.scrolled {
     padding: 16px 0;
     background-color: rgba($color: $color-background, $alpha: 0.8);
     backdrop-filter: blur(10px);
@@ -19,12 +23,6 @@ $dimension-bar: 900px;
       box-shadow: 0 -4px 16px 0 rgba(0, 0, 0, 0.06);
     }
   }
-
-  // @media (max-width: $dimension-bar){
-  //   background-color: $color-placeholder;
-  //   padding: 24px 0;
-  //   bottom: 0;
-  // }
 }
 
 .nav__container {
@@ -38,8 +36,6 @@ $dimension-bar: 900px;
   transition: 0.3s ease-in-out;
 
   @media (max-width: $dimension-bar) {
-    // justify-content: center;
-    // align-items: center;
     height: 100vh;
     padding: 24px;
     flex-direction: column;
@@ -49,7 +45,6 @@ $dimension-bar: 900px;
     bottom: 0;
     width: 300px;
     right: 0;
-    // left: 0;
     transform: translateX(110%);
     background-color: $color-background;
     z-index: 2;
@@ -121,8 +116,6 @@ $dimension-bar: 900px;
 
 .nav__close {
   margin-left: auto;
-  // border-radius: 50%;
-  // border: 1px solid $color-body;
   padding: 8px;
 
   & > svg {
