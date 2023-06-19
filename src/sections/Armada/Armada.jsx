@@ -9,6 +9,7 @@ import useSWR from "swr";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 function Armada({ showedCar, home }) {
+  const WHATSAPP = process.env.NEXT_PUBLIC_WA;
   const { data, error } = useSWR("/api/staticdata", fetcher);
   const [cars, setCars] = useState([]);
 
@@ -22,17 +23,28 @@ function Armada({ showedCar, home }) {
     }
   }, [data]);
 
+  const handleOrder = (car) => {
+    let text = `${WHATSAPP}&text=Halo, Saya%20tertarik%20untuk%20menyewa%20mobil%20${car}`;
+    return text;
+  };
+
   return (
-    <section className={css.wrapper}>
+    <section className={home ? css.wrapper : css.wrapper_2}>
       <h2 className="hidden">Armada</h2>
       <Container maxWidth="lg">
         <Box className={css.container}>
-          <Box textAlign={"center"}>
-            <Box className="caption" mb={2}>
-              Armada
+          {home ? (
+            <Box textAlign={"center"}>
+              <Box className="caption" mb={2}>
+                Armada
+              </Box>
+              <Box className="header-2">Mobil koleksi kami</Box>
             </Box>
-            <Box className="header-2">Mobil koleksi kami</Box>
-          </Box>
+          ) : (
+            <Box className="header-2" textAlign={"center"}>
+              Pilihan Kendaraan untuk Anda
+            </Box>
+          )}
 
           <Box className={css.content}>
             {cars?.map((car) => (
@@ -73,9 +85,11 @@ function Armada({ showedCar, home }) {
                     </Box>
                   </Box>
                   <Box className={css.card_button}>
-                    <ButtonMain style={{ width: "100%" }}>
-                      Pesan Sekarang
-                    </ButtonMain>
+                    <Link href={handleOrder(car.name)}>
+                      <ButtonMain style={{ width: "100%" }}>
+                        Pesan Sekarang
+                      </ButtonMain>
+                    </Link>
                   </Box>
                 </Box>
               </Box>
