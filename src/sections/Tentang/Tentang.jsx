@@ -2,7 +2,7 @@ import { Box, Container } from "@mui/material";
 import React from "react";
 import css from "./Tentang.module.scss";
 import ButtonMain from "../../components/ButtonMain/ButtonMain";
-import Image from "next/image";
+import Link from "next/link";
 
 function Tentang() {
   return (
@@ -10,20 +10,12 @@ function Tentang() {
       <h2 className="hidden">Tentang Kami</h2>
       <Container maxWidth="lg">
         <Box className={css.container}>
-          <Box className={css.image_container}>
-            {/* <Image
-              src="/images/about_car.jpg"
-              alt="Car Parking"
-              width={750}
-              height={500}
-            /> */}
-          </Box>
+          <Box className={css.image_container} />
           <Box className={css.content}>
             <Box className="caption" sx={{ marginBottom: 2 }}>
               Tentang
             </Box>
             <Box className="header-2" sx={{ marginBottom: 4 }}>
-              {/* Lebih dari 3500 orang telah menyewa mobil kami */}
               Lebih dari 3500 orang yang telah menyewa
             </Box>
             <p style={{ marginBottom: 40 }}>
@@ -34,9 +26,9 @@ function Tentang() {
               awal hingga akhir.
             </p>
 
-            <Box>
+            <Link href={"/armada"}>
               <ButtonMain>Lihat Armada</ButtonMain>
-            </Box>
+            </Link>
           </Box>
         </Box>
       </Container>

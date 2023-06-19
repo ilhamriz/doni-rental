@@ -2,6 +2,7 @@ import Image from "next/image";
 import css from "./Hero.module.scss";
 import { Box, Container, Typography } from "@mui/material";
 import ButtonMain from "../../components/ButtonMain/ButtonMain";
+import Link from "next/link";
 
 const cars_logo = [
   {
@@ -43,6 +44,8 @@ const cars_logo = [
 ];
 
 function Hero() {
+  const CHAT = process.env.NEXT_PUBLIC_CHAT;
+
   return (
     <section className={css.wrapper}>
       <Container maxWidth="lg">
@@ -58,8 +61,12 @@ function Hero() {
             </p>
 
             <Box className={css.btn_wrapper}>
-              <ButtonMain styles="secondary">Pesan sekarang</ButtonMain>
-              <ButtonMain styles="transparent">Lihat armada</ButtonMain>
+              <Link href={CHAT}>
+                <ButtonMain styles="secondary">Pesan sekarang</ButtonMain>
+              </Link>
+              <Link href={"/armada"}>
+                <ButtonMain styles="transparent">Lihat armada</ButtonMain>
+              </Link>
             </Box>
           </Box>
           <Box className={css.cars_logo_container}>
