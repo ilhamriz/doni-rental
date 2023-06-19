@@ -8,6 +8,7 @@
   transition: 0.2s ease-in-out;
   border: 2px solid;
   font-weight: 700;
+  text-transform: capitalize;
 
   &--primary {
     background-color: $color-primary;
@@ -36,10 +37,10 @@
     color: $color-title-light;
     border-color: $color-background;
 
-    // &:hover {
-    //   background-color: $color-accent-hover;
-    //   border-color: $color-background;
-    // }
+    &:hover {
+      background-color: #242424;
+      border-color: #242424;
+    }
   }
 
   &--outline {
@@ -48,6 +49,7 @@
     border-color: $color-primary;
 
     &:hover {
+      background-color: $color-primary-hover;
       border-color: $color-primary-hover;
     }
   }
@@ -58,7 +60,7 @@
     color: $color-title-light;
 
     &:hover {
-      background-color: $color-background;
+      background-color: rgba($color: $color-background, $alpha: 0.7);
     }
   }
 
