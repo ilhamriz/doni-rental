@@ -1,6 +1,6 @@
 import Image from "next/image";
 import css from "./Hero.module.scss";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import ButtonMain from "../../components/ButtonMain/ButtonMain";
 import Link from "next/link";
 

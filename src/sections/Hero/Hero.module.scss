@@ -29,6 +29,9 @@
   @media (max-width: $dimension-tablet) {
     padding-top: 200px;
   }
+  @media (max-width: $dimension-mobile-l) {
+    padding-top: 150px;
+  }
 }
 
 .content {
@@ -55,6 +58,7 @@
 
   @media (max-width: $dimension-tablet) {
     font-size: $font-size-xl3;
+    line-height: normal;
   }
 
   @media (max-width: $dimension-mobile-l) {
