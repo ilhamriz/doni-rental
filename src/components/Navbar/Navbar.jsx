@@ -16,10 +16,10 @@ const menus = [
     name: "Armada",
     link: "/armada",
   },
-  {
-    name: "Tentang Kami",
-    link: "/tentang_kami",
-  },
+  // {
+  //   name: "Tentang Kami",
+  //   link: "/tentang_kami",
+  // },
 ];
 
 const Navbar = ({ home }) => {
