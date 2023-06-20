@@ -33,7 +33,8 @@ button {
 
 .header-1 {
   @include text-header;
-  font-size: $font-size-xl4;
+  font-size: 60px;
+  line-height: 70px;
   letter-spacing: 0.001em;
 }
 .header-2 {

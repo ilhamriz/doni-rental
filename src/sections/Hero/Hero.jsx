@@ -51,9 +51,9 @@ function Hero() {
       <Container maxWidth="lg">
         <Box className={css.container}>
           <Box className={css.content}>
-            <Typography variant="h2" className={css.title}>
+            <h2 className={`${css.title} header-1`}>
               Cari rental mobil yang mudah dan murah?
-            </Typography>
+            </h2>
             <p>
               Jangan biarkan persewaan mobil menjadi menegangkan dari rencana
               perjalanan Anda. Percayakan kepada kami untuk memberi Anda
