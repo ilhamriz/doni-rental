@@ -6,18 +6,21 @@ import { Box, Button, Container } from "@mui/material";
 import Navbar from "@/components/Navbar/Navbar";
 import PropTypes from "prop-types";
 
-const name = "Ilhamriz";
-export const siteTitle = "Doni Rental Mobil Jambi";
+export const siteTitle = "DN RENTAL Mobil Jambi";
 
 const Layout = ({ children, home }) => {
+  const PHONE = process.env.NEXT_PUBLIC_PHONE;
+
   return (
     <div className={css.container}>
       <h1 className="hidden">Doni Rental Mobil</h1>
       <Head>
+        {/* TODO: UBAH icon */}
         <link rel="icon" href="/favicon.ico" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Rental Mobil Jambi" />
+        {/* TODO: UBAH deskripsi */}
+        <meta name="description" content="DN RENTAL Mobil Jambi" />
         {/* TODO: UBAH DOMAIN */}
         <meta property="og:site_name" content="bersamaamerta.com" />
         <meta property="og:url" content="bersamaamerta.com" />
@@ -44,7 +47,10 @@ const Layout = ({ children, home }) => {
               />
             </Box>
             <Box className={css.footer_container}>
-              <Box className={css.footer_content}>
+              <Link
+                href={"https://maps.app.goo.gl/8heLxznKzVP8WNms5?g_st=iw"}
+                className={css.footer_content}
+              >
                 <Image
                   src={"/location.svg"}
                   alt="Location"
@@ -52,8 +58,11 @@ const Layout = ({ children, home }) => {
                   height={24}
                 />
                 <Box>Jl. Srikayangan No. 42, Talang Bakung, Kota Jambi</Box>
-              </Box>
-              <Box className={css.footer_content}>
+              </Link>
+              <Link
+                href={`tel:+${PHONE}`}
+                className={css.footer_content}
+              >
                 <Image
                   src={"/phone.svg"}
                   alt="Location"
@@ -61,7 +70,7 @@ const Layout = ({ children, home }) => {
                   height={24}
                 />
                 <Box>0823-7957-9333</Box>
-              </Box>
+              </Link>
             </Box>
           </Box>
         </Container>

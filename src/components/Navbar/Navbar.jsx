@@ -23,6 +23,7 @@ const menus = [
 ];
 
 const Navbar = ({ home }) => {
+  const PHONE = process.env.NEXT_PUBLIC_PHONE;
   const router = useRouter();
   const [currentPath, setCurrentPath] = useState("");
   const [isMenu, setIsMenu] = useState(false);
@@ -112,7 +113,7 @@ const Navbar = ({ home }) => {
                 </li>
               ))}
               <li>
-                <Link href={"tel:+62823-7957-9333"}>
+                <Link href={`tel:+${PHONE}`}>
                   <ButtonMain styles="outline">Hubungi Kami</ButtonMain>
                 </Link>
               </li>

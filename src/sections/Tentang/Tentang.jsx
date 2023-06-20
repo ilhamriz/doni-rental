@@ -26,8 +26,8 @@ function Tentang() {
               awal hingga akhir.
             </p>
 
-            <Link href={"/armada"}>
-              <ButtonMain>Lihat Armada</ButtonMain>
+            <Link href={"https://maps.app.goo.gl/8heLxznKzVP8WNms5?g_st=iw"}>
+              <ButtonMain>Lihat Lokasi Rental</ButtonMain>
             </Link>
           </Box>
         </Box>
